@@ -28,4 +28,12 @@ class Controller{
         }
         return Result(1, "fail", null)
     }
+
+    @PutMapping("/puttRequest")
+    fun puttRequest(@RequestBody user: User?): Result<User?> {
+        if (user != null) {
+            return Result(0, "success",user)
+        }
+        return Result(1, "fail", null)
+    }
 }
