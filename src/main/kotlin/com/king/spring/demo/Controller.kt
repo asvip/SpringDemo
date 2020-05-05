@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 class Controller{
 
+
     @GetMapping("/getRequest")
     fun getRequest(@RequestParam username: String?): Result<User?>{
         if(username == "king12345"){
@@ -21,8 +22,8 @@ class Controller{
     @PostMapping("/postRequest")
     fun postRequest(@RequestParam username: String?): Result<User?> {
         if (username == "king12345") {
-            return Result(0,"success",User(username,null,null))
+            return Result(0, "success", User(username, null, null))
         }
-        return Result(1,"fail",null)
+        return Result(1, "fail", null)
     }
 }
