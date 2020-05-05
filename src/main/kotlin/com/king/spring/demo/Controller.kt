@@ -15,7 +15,8 @@ class Controller{
 
     @GetMapping("/getRequest")
     fun getRequest(@RequestParam username: String?): Result<User?> {
-        if(username == "king12345678"){
+        if(username == "king123456789"){
+
             return Result(0, "success", User(username, null, null))
         }
         return Result(1, "fail", null)
@@ -23,7 +24,8 @@ class Controller{
 
     @PostMapping("/postRequest")
     fun postRequest(@RequestParam username: String?): Result<User?> {
-        if (username == "king12345678") {
+        if (username == "king123456789") {
+
             return Result(0, "success", User(username, null, null))
         }
         return Result(1, "fail", null)
