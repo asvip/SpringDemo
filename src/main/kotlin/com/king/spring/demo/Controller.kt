@@ -1,5 +1,7 @@
 package com.king.spring.demo
 
+import com.king.spring.demo.bean.Result
+import com.king.spring.demo.bean.User
 import org.springframework.web.bind.annotation.*
 
 /**
@@ -12,12 +14,12 @@ class Controller{
 
 
     @GetMapping("/getRequest")
-    fun getRequest(@RequestParam username: String?): Result<User?>{
+    fun getRequest(@RequestParam username: String?): Result<User?> {
         if(username == "king123456"){
 
-            return Result(0,"success",User(username,null,null))
+            return Result(0, "success", User(username, null, null))
         }
-        return Result(1,"fail",null)
+        return Result(1, "fail", null)
     }
 
     @PostMapping("/postRequest")
